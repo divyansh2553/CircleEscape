@@ -39,13 +39,21 @@ document.getElementById('pauseButton').onclick = () => {
     isPlaying = false;
 };
 
-// Add event listener for the spacebar
+// Add event listener for the spacebar to make the bird flap
 window.addEventListener('keydown', (e) => {
     if (e.code === 'Space' && isPlaying) {
         bird.velocity = bird.lift;
         e.preventDefault(); // Prevent default scrolling behavior
     }
 });
+
+// Add touch event to make the bird flap on mobile devices
+canvas.addEventListener('touchstart', (e) => {
+    if (isPlaying) {
+        bird.velocity = bird.lift;
+        e.preventDefault(); // Prevent default touch behavior
+    }
+}, { passive: false });
 
 function setLevel(selectedLevel) {
     if (selectedLevel === 'easy') {
