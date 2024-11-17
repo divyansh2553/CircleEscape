@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Escape</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls">
+            <select id="levelSelect">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+            </select>
+            <button id="playButton">Play</button>
+            <button id="pauseButton">Pause</button>
+        </div>
+        <div class="score-display">
+            <div id="currentScore">Score: 0</div>
+            <div id="highScore">High Score (Easy): 0</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
